@@ -59,9 +59,6 @@ public class NumberGame {
         int guess;
         for (int i = 4; i >= 0; i--) {
             System.out.println("\nThe range of your number is "+low+" to "+high);
-
-            System.out.println(low+" "+number+" "+high);
-
             System.out.print("Guess the number : ");
             guess=sc.nextInt();
             if(guess==number){
@@ -92,7 +89,6 @@ public class NumberGame {
         }while (true);
     }
     public static void main(String[] args)  {
-        //new NumberGame().run();
         boolean flag=true;
         NumberGame ob =new NumberGame();
         int round=0,score=0,scored;
