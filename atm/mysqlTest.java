@@ -10,7 +10,6 @@ public class mysqlTest {
         String jdbcURL = "jdbc:mysql://localhost:3306/test";
         String username = "root";
         String password = "";
-
         try (Connection connection = DriverManager.getConnection(jdbcURL, username, password)) {
             if (connection != null) {
                 System.out.println("Connected to the database!");
