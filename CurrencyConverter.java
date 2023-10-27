@@ -33,27 +33,13 @@ public class CurrencyConverter {
         // Accessing object
         String req_result = jsonobj.get("result").getAsString();
 
-
-        //System.out.println("req_result\n"+req_result);
-        //System.out.println("jsonobj\n"+jsonobj);
-        //System.out.println("jsonString\n"+jsonData);
-
         // Parse JSON using Gson
         Gson gson = new Gson();
         ExchangeRateData exchangeRateData = gson.fromJson(jsonData, ExchangeRateData.class);
 
-        // Access the separated data
-        //System.out.println("Result: " + exchangeRateData.getTermsOfUse());
-        //System.out.println("Base Code: " + exchangeRateData.getbase_code());//
 
         // Access conversion rates
         Map<String, Double> conversion_rates = exchangeRateData.getConversionRates();
-
-        //if (conversion_rates != null) {
-        //    for (Map.Entry<String, Double> entry : conversion_rates.entrySet()) {
-        //        System.out.println(entry.getKey() + ": " + entry.getValue());
-        //    }
-        //}
 
         if (conversion_rates == null){
             System.out.println("!!API NOT WORKING!! DATA NOT FETCHED !! RESTART PROGRAM !!");
