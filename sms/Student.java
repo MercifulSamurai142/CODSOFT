@@ -1,7 +1,7 @@
 package sms;
 
 public class Student {
-    String roll,name,gender,grade,address;
+    private String roll,name,gender,grade,address;
     int score;
 
     public String getRoll() {
